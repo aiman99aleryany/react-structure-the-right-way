@@ -1,0 +1,31 @@
+// design 1
+// for Mobile:  0 - 600px
+// for Tablets or iPad: 600px - 900px
+
+// design 2
+// for Tablets landscape: 901px - 1200px
+// for laptops and Desktops: 1201px - 1800px
+
+// design 3
+// for big screens: 1801px - INF
+
+// These queries are for the general layout, if you want to do different sizes, add them to
+// their dedicated files.
+
+@mixin tablet-landscape-query {
+    @media only screen and(min-width: 900px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptop-query {
+    @media only screen and (min-width: 1201px) and (max-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin gigantic-query {
+    @media only screen and (min-width: 1801px) {
+        @content;
+    }
+}

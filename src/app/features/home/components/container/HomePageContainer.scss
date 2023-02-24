@@ -1,0 +1,7 @@
+@use '../../../../assets/sass/constants' as constants;
+
+.homePageContainer {
+    margin: 0 auto;
+    max-width: constants.$container-max-width;
+    background-color: red;
+}

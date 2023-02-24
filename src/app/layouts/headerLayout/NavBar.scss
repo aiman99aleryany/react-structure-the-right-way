@@ -1,0 +1,60 @@
+@use '../../assets/sass/colors' as colors;
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: min(7rem, 7vh);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: colors.$nav-bg-color;
+    box-shadow: colors.$nav-box-shadow;
+
+    &-link {
+        flex-grow: 1;
+        height: 110%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-active {
+            position: relative;
+            background-color: colors.$nav-active-bg-color;
+            box-shadow: colors.$nav-active-box-shadow;
+            border-top: 2.5px solid colors.$primary-color;
+            border-radius: 0.9rem 0.9rem 0 0;
+            animation-name: bump;
+            animation-duration: 500ms;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+
+            .navbar-icon {
+                position: relative;
+                top: -0.5rem;
+                color: colors.$primary-color;
+            }
+        }
+    }
+
+    &-icon {
+        font-size: 2.5rem;
+        color: rgba(128, 128, 128, 0.482);
+    }
+}
+
+@keyframes bump {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -0.4rem;
+    }
+
+    100% {
+        top: 0;
+    }
+}

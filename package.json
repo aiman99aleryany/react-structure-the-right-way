@@ -1,0 +1,42 @@
+{
+    "name": "project",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "vite --host",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "lint": "eslint ./src/**/*.jsx",
+        "sass": "sass ./src/app/assets/sass/index.scss ./src/app/assets/sass/css/index.css --watch",
+        "prettier": "npx prettier . --write",
+        "dev": "npx concurrently 'npm run start' 'npm run sass'"
+    },
+    "dependencies": {
+        "joi": "^17.8.1",
+        "nanoid": "^4.0.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.7.1",
+        "react-router-dom": "^6.8.1",
+        "zustand": "^4.3.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "@types/react-router-dom": "^5.3.3",
+        "@vitejs/plugin-react": "^3.1.0",
+        "eslint": "^8.34.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-react-app": "^7.0.1",
+        "eslint-plugin-react": "^7.32.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.8.4",
+        "sass": "^1.58.0",
+        "tsc-alias": "^1.8.2",
+        "typescript": "^4.9.3",
+        "vite": "^4.1.0",
+        "vite-jsconfig-paths": "^2.0.1",
+        "vite-plugin-eslint": "^1.8.1",
+        "vite-tsconfig-paths": "^4.0.5"
+    }
+}
